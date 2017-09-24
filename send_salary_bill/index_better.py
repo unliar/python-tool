@@ -73,7 +73,7 @@ def send_email(server, mail_from, mail_to, mail_subject, mail_body):
 # example qqmail
 def main():
     server = create_mail_server(
-        'smtp.qq.com', 587, '370732889@qq.com', 'password')
+        'smtp.qq.com', 587, '370732889@qq.com', 'xxx')
     data_dict = open_scv_data('test.csv', '邮箱')
 
     for key, value in data_dict.items():
