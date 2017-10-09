@@ -27,7 +27,7 @@ def create_mail_server(mail_server_host, mail_server_port, from_addr, from_pass)
     return server
 
 
-def open_scv_data(file_name, mail_key):
+def open_csv_data(file_name, mail_key):
     """
     @ file_name 文件名,the data file
 
@@ -74,7 +74,7 @@ def send_email(server, mail_from, mail_to, mail_subject, mail_body):
 def main():
     server = create_mail_server(
         'smtp.qq.com', 587, '370732889@qq.com', 'xxx')
-    data_dict = open_scv_data('test.csv', '邮箱')
+    data_dict = open_csv_data('test.csv', '邮箱')
 
     for key, value in data_dict.items():
         send_email(server, '370732889@qq.com', key, '你的账单到啦~', value)
